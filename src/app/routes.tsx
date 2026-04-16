@@ -13,58 +13,27 @@ import { HomeActive } from "./screens/HomeActive";
 import { RideInsights } from "./screens/RideInsights";
 import { GuidedBreathing } from "./screens/GuidedBreathing";
 
-export const router = createBrowserRouter([
+export const router = createBrowserRouter(
+  [
+    {
+      element: <RootLayout />,
+      children: [
+        { path: "/", Component: Onboarding1 },
+        { path: "/onboarding-2", Component: Onboarding2 },
+        { path: "/onboarding-3", Component: Onboarding3 },
+        { path: "/onboarding-4", Component: Onboarding4 },
+        { path: "/onboarding-5", Component: Onboarding5 },
+        { path: "/onboarding-6", Component: Onboarding6 },
+        { path: "/onboarding-7", Component: Onboarding7 },
+        { path: "/home", Component: HomeNoRides },
+        { path: "/home-upcoming", Component: HomeUpcoming },
+        { path: "/home-active", Component: HomeActive },
+        { path: "/ride-insights", Component: RideInsights },
+        { path: "/breathing", Component: GuidedBreathing },
+      ],
+    },
+  ],
   {
-    element: <RootLayout />,
-    children: [
-      {
-        path: "/",
-        Component: Onboarding1,
-      },
-      {
-        path: "/onboarding-2",
-        Component: Onboarding2,
-      },
-      {
-        path: "/onboarding-3",
-        Component: Onboarding3,
-      },
-      {
-        path: "/onboarding-4",
-        Component: Onboarding4,
-      },
-      {
-        path: "/onboarding-5",
-        Component: Onboarding5,
-      },
-      {
-        path: "/onboarding-6",
-        Component: Onboarding6,
-      },
-      {
-        path: "/onboarding-7",
-        Component: Onboarding7,
-      },
-      {
-        path: "/home",
-        Component: HomeNoRides,
-      },
-      {
-        path: "/home-upcoming",
-        Component: HomeUpcoming,
-      },
-      {
-        path: "/home-active",
-        Component: HomeActive,
-      },
-      {
-        path: "/ride-insights",
-        Component: RideInsights,
-      },
-      {
-        path: "/breathing",
-        Component: GuidedBreathing,
-      },
-    ],
-  },
-]);
+    basename: "/testing-calm/",
+  }
+);
